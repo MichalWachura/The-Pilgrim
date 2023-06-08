@@ -2,89 +2,88 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    cursor: none
+    cursor: none;
+    padding:0;
     
 }
 
 
-body
-
-{
-
+body{
     background-color: #ffffff;
     font-family:  Arial, sans-serif;
-    font-size: 12px;
-};
-
-a:hover
-{
-    color: red; /*link po najechaniu kursorem */
+    font-size: 18px;
 }
-#nav_1
-{
+
+.main-container{
+    border: 2px solid;
+    border: #d61010;
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav_1{
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     font-weight: lighter;
-    border-style: solid;
-    border-width: 10px ;
-    border-color: #ffffff;
-    padding: 10px;
+    padding: 1rem;
     margin: 0px;
     text-align: center;
 }
 
-.text
-{
+.text-container{
     color: #000000;
-    text-align: center;
-    width: 512px;
-    margin: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-}
+    width: 65vw;
+    line-height: 2rem;
     
-
-h1
-{
+}
+h1{
     color: #222;
-    text-align: center;
-    font-size: 250 px;
-    
-    
+    text-align:center;
 }
-h5
-{
-    color: #222;
-    font-weight: lighter;
+.images{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+
+img{
+    height: 70%;
+    width: 50%;
+    min-width: 100%;
 }
-
-
 #bottom
 {
    
-    height: 200px;
+    height: 14vh;
     background-color: #222; 
     color:#ffffff;
     text-align: center;
-    font-size: 250 px;
-    padding: 90px;
+    font-size: 0.5rem;
     font-size: larger;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 12px;
        
 }
 
 
 
-.drawing
-{
-    
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /*tak musi być chyba zawsze żeby foty były na środku*/
 
-}
 .inner-cursor
 {
     
@@ -96,7 +95,7 @@ h5
     background-color: #fff;
     mix-blend-mode: difference;
     border-radius: 50%;
-    pointer-events: none;*/
+    pointer-events: none;
     transition: width 0.5s,height  0.5s;
     pointer-events: none;
 }
@@ -127,7 +126,70 @@ h5
     pointer-events: none;
 }
     
-   /* transition: 0.1;
+  
     
 
-}
+/*---------------MEDIA-QEUERRY------------------ */
+
+@media (min-width: 319px) and (max-width: 480px) {
+    body {
+      font-size: 8px;
+      cursor: none;
+    }
+    .text-container{
+        line-height: 0.8rem;
+    }
+
+    .inner-cursor{
+        display: none;
+    }
+    .outer-cursor{
+        display: none;
+    }
+    img{
+        height: auto;
+        width: 50%;
+        min-width: 100%;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 1200px){
+    body {
+        font-size: 16px;
+        cursor: none;
+      }
+      .text-container{
+        line-height: 1.2rem;
+    }
+      
+      
+      
+      .inner-cursor{
+          display: none;
+      }
+      .outer-cursor{
+          display: none;
+      }
+    }
+@media (min-width: 1201px) {
+        h4{
+            text-align: left;
+        }
+      }
+
+     
+     
+     
+     
+
+ 
+
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
