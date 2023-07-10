@@ -240,7 +240,7 @@ body.dark-theme ::selection{
       font-size: 8px;
       cursor: none;
     }
-    .text-container{
+ .text-container{
         line-height: 0.8rem;
     }
 
@@ -260,14 +260,28 @@ body.dark-theme ::selection{
         text-align: right;
         margin-right: 1rem;
         font-size: 8px;
-        color: var(--light-gray);
+        color: var(--black);
         transition: 0.3s all ease-in; 
   }
+  #bottom{
+        font-size: 0.6rem;
+        height: 10vh;
+        padding-top: 1rem ;
+        padding-bottom: 1rem;
+        gap: 0.5rem;
+  }
+    #day-night.dark-theme{
+        text-align: right;
+        margin-right: 1rem;
+        font-size: 8px;
+        color: var(--light-gray);
+        transition: 0.3s all ease-in; 
+ }
 }
   @media (min-width: 481px) and (max-width: 1200px){
     body {
         font-size: 16px;
-        cursor: none;
+        
       }
       .text-container{
         line-height: 1.2rem;
@@ -289,9 +303,18 @@ body.dark-theme ::selection{
         display: none;
     }
      
-     
+    #day-night .dark-theme{
+ 
+        text-align: right;
+        margin-right: 1rem;
+        font-size: 8px;
+        color: var(--light-gray);
+        transition: 0.3s all ease-in; 
+     }
      
     }
+
+
 @media (min-width: 1201px) {
         h4{
             text-align: left;
