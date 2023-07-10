@@ -15,46 +15,56 @@ function moveCursor(e) {
 }
 //====================== DAY NIGHT ======================
 
-const switchButton = document.getElementById("day-night");
-let mode = localStorage.getItem("mode");
+let darkMode = localStorage.getItem("darkMode");
+const darkModeToggle = document.getElementById("day-night");
 
-switchButton = document.addEventListener("click", changeDayNight);
 
-function changeDayNight(event) {
-	const target = event.target;
-	if (target.id !== "day-night") return; // Exit if the click is not on the #day-night element
+//  check if dark mode is enabled
+// if its enbled, turn it off
+// if it disabled,turn it on
 
-	document.querySelector("body").classList.toggle("dark-theme");
-	document.querySelector(".text-container").classList.toggle("dark-theme");
-	document.querySelector(".main-container").classList.toggle("dark-theme");
-	document.querySelector(".arrow-top").classList.toggle("dark-theme");
-	switchButton.classList.toggle("dark-theme");
-
-	if (switchButton.classList.contains("dark-theme")) {
-		switchButton.innerHTML = "+ light mode";
-		
-	} else {
-		switchButton.innerHTML = "+ dark mode";
-		
-	}
+const enableDarkMode = () => {
+	//  1. add the class dark -theme to the body
+	document.querySelector("body").classList.add("dark-theme");
+	document.querySelector(".text-container").classList.add("dark-theme");
+	document.querySelector(".main-container").classList.add("dark-theme");
+	document.querySelector(".arrow-top").classList.add("dark-theme");
+	darkModeToggle.classList.add("dark-theme");
+	darkModeToggle.innerHTML = "+ light mode";
+	//  2. upadate darkMode in the localStorage
+	localStorage.setItem("darkMode", "enabled");
 };
 
+const disableDarkMode = () => {
+	//  1. remove the class dark -theme to the body
+	document.querySelector("body").classList.remove("dark-theme");
+	document.querySelector(".text-container").classList.remove("dark-theme");
+	document.querySelector(".main-container").classList.remove("dark-theme");
+	document.querySelector(".arrow-top").classList.remove("dark-theme");
+	darkModeToggle.classList.remove("dark-theme");
+	darkModeToggle.innerHTML = "+ dark mode";
+	//  2. upadate darkMode in the localStorage
+	localStorage.setItem("darkMode", null);
+};
+
+if(darkMode ==="enabled"){
+	enableDarkMode();
+}else{
+	disableDarkMode();
+}
 
 
-//  230709 
-//  Improve media queries  ---> footer padding,font size, 
+darkModeToggle.addEventListener("click", () => {
+	darkMode = localStorage.getItem("darkMode"); // Updatind darkMode Vairable
+	if (darkMode !== "enabled") {
+		enableDarkMode();
+		console.log(darkMode);
+	} else {
+		disableDarkMode();
+		console.log(darkMode);
+	}
+});
+
+//  230709
+//  Improve media queries  ---> footer padding,font size,
 // working on dark mode (localStorage)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
