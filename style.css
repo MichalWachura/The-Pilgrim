@@ -31,26 +31,24 @@ body ::selection {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 0.5rem;
-	
 }
 #language {
 	margin-left: 1rem;
-    font-size: 1.3rem;
-    color: var(--light-gray);
-    transition: 0.3s all ease-in;
+	font-size: 1.3rem;
+	color: var(--light-gray);
+	transition: 0.3s all ease-in;
 }
-.lang-list{
-    margin-top: 1.5rem;
-    list-style: none;
-    display: none;
+.lang-list {
+	margin-top: 1.5rem;
+	list-style: none;
+	display: none;
 }
-.lang-list li{
-    margin-left: 0;
-    
+.lang-list li {
+	margin-left: 0;
 }
 #day-night {
 	margin-left: auto;
-	
+
 	margin-right: 1rem;
 	font-size: 1.3rem;
 	color: var(--light-gray);
@@ -224,6 +222,11 @@ body.dark-theme ::selection {
 		width: 50%;
 		min-width: 100%;
 	}
+	#language {
+		font-size: 8px;
+		color: var(--light-gray);
+		transition: 0.3s all ease-in;
+	}
 	#day-night {
 		text-align: right;
 		margin-right: 1rem;
@@ -253,7 +256,11 @@ body.dark-theme ::selection {
 	.text-container {
 		line-height: 1.2rem;
 	}
-
+	#language {
+		font-size: 1rem;
+		color: var(--light-gray);
+		transition: 0.3s all ease-in;
+	}
 	#day-night {
 		text-align: right;
 		margin-right: 1rem;
