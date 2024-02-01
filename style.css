@@ -108,8 +108,8 @@ img {
 .arrow-top {
 	/* background-color:var(--dark-gray);  */
 	transform: rotate(180deg);
-	height: 1.5rem;
-	width: 1.5rem;
+	height: 1rem;
+	width: 1rem;
 	border-radius: 50%;
 	transition: 0.15s ease-in;
 	display: flex;
@@ -164,7 +164,7 @@ a {
 	width: 25px;
 	height: 25px;
 	transform: translate(-50%, -50%);
-	border: 1px solid #fff;
+	border: 1px solid var(--white);
 	mix-blend-mode: difference;
 	/*border-radius: 5 0.1s;
     border-radius: 50%;*/
@@ -202,7 +202,7 @@ body.dark-theme ::selection {
 
 /*---------------MEDIA-QEUERRY------------------ */
 
-@media (min-width: 319px) and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
 	body {
 		font-size: 8px;
 		cursor: none;
@@ -217,10 +217,10 @@ body.dark-theme ::selection {
 	.outer-cursor {
 		display: none;
 	}
-	img {
-		height: auto;
-		width: 50%;
-		min-width: 100%;
+	img{
+		/* height: auto; */
+		/* width: 50%; */
+		/* width: 100%; */
 	}
 	#language {
 		font-size: 8px;
@@ -247,6 +247,16 @@ body.dark-theme ::selection {
 		font-size: 8px;
 		color: var(--light-gray);
 		transition: 0.3s all ease-in;
+	}
+	.arrow-top {
+		/* background-color:var(--dark-gray);  */
+		transform: rotate(180deg);
+		height: 1rem;
+		width:  1rem;
+		border-radius: 50%;
+		transition: 0.15s ease-in;
+		opacity: 80%;
+		/* filter: invert(1); */
 	}
 }
 @media (min-width: 481px) and (max-width: 1200px) {
